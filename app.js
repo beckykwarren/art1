@@ -28,7 +28,7 @@ function setup () {
         ellipse(
             (x * basePixels + 15),
             (y * basePixels +15),
-            basePixels
+            basePixels - 2
         )
       
       
