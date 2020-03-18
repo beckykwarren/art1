@@ -3,7 +3,7 @@ let rows, columns
 let basePixels = 1 
 let frameRateDisplay
 let timeOffset = 0.001
-let colourVar = 10
+let colourVar = 3
 
 let randomRed1 = Math.random()*255
 let randomGreen1 = Math.random()*255
