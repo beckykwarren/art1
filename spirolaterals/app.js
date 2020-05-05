@@ -19,10 +19,10 @@ var a = window.innerWidth/40;
 var seq = [1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10)];
 var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
 
-var x1=centreX-2*a;
-var y1=centreY;
-var x2=centreX-2*a;
-var y2=centreY;
+var x1=centreX-3*a;
+var y1=centreY-3*a;
+var x2=centreX-3*a;
+var y2=centreY-3*a;
 
 var i=0;
 var j=0;
