@@ -15,14 +15,22 @@ let randomBlue2 = Math.random()*255
 let centreX = window.innerWidth/2
 let centreY = window.innerHeight/2
 
-var a = window.innerWidth/40;
+// var a = window.innerWidth/10;
+var a = 1000;
 var seq = [1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10)];
+var total = 0;
+for(var i = 0; i < seq.length; i++) {
+    total += seq[i];
+}
+var avg = total / seq.length;
+var a = window.innerWidth/(10*avg);
+
 var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
 
-var x1=centreX-3*a;
-var y1=centreY-3*a;
-var x2=centreX-3*a;
-var y2=centreY-3*a;
+var x1=centreX-4*a;
+var y1=centreY-5*a;
+var x2=centreX-4*a;
+var y2=centreY-5*a;
 
 var i=0;
 var j=0;
@@ -56,13 +64,22 @@ function draw() {
   x2=x2+c;
   y2=y2+d;
 
+  stroke(0,0,0,90)
+  strokeWeight(8+window.innerWidth/500)
+  noFill()
+  line(x1+0.15*c, y1+0.15*d, x2, y2);
 
   stroke(((randomRed2 - randomRed1)*x1/window.innerWidth+randomRed1),
     ((randomGreen2 - randomGreen1)*x1/window.innerWidth+randomGreen1), 
     ((randomBlue2 - randomBlue1)*x1/window.innerWidth+randomBlue1))
-  strokeWeight(5+window.innerWidth/1000)
+  strokeWeight(6+window.innerWidth/500)
   noFill()
   line(x1, y1, x2, y2);
+  
+  stroke(255,255,255,70)
+  strokeWeight(2+window.innerWidth/500)
+  noFill()
+  line(x1-1, y1-1, x2-1, y2-1);
 
   j++;
 }
