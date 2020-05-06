@@ -2,6 +2,7 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight-74)
   background(0, 0, 0)
   frameRate(5)
+
 }
 
 let randomRed1 = Math.random()*255
@@ -13,7 +14,7 @@ let randomGreen2 = Math.random()*255
 let randomBlue2 = Math.random()*255
 
 let centreX = window.innerWidth/2
-let centreY = window.innerHeight/2
+let centreY = (window.innerHeight-74)/2
 
 // var a = window.innerWidth/10;
 var seq = [1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10)];
@@ -22,22 +23,35 @@ for(var i = 0; i < seq.length; i++) {
     total += seq[i];
 }
 var avg = total / seq.length;
-var a = window.innerWidth/(8*avg);
-console.log(a);
+var min = Math.min(window.innerWidth,window.innerHeight)
+var a = min/(8*avg);
 
-var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
+console.log(seq);
 
-var x1=centreX-a;
-var y1=centreY-2*a-74;
-var x2=centreX-a;
-var y2=centreY-2*a-74;
+var len = Math.floor(Math.random() *seq.length/2+seq.length/2);
+
+seq.length=len;
+
+var x1=centreX;
+var y1=centreY-74;
+var x2=centreX;
+var y2=centreY-74;
 
 var i=0;
 var j=0;
 
-function draw() {
 
-  if (i<len) {i++;}
+function draw() {
+  fill(0, 0,0);
+  noStroke();
+  rect(0, 0, 200, 40);
+  textSize(20);
+  fill(255,255,255,100);
+  text(seq, 15, 30);
+
+  // rect (0,74,200,30);
+
+  if (i<len-1) {i++;}
   else {i=0;}
 
   if (j%4==0 ) {
@@ -82,4 +96,6 @@ function draw() {
   line(x1-1, y1-1, x2-1, y2-1);
 
   j++;
+
+
 }
