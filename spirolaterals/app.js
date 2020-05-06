@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight)
+  createCanvas(window.innerWidth, window.innerHeight-74)
   background(0, 0, 0)
   frameRate(5)
 }
@@ -16,14 +16,13 @@ let centreX = window.innerWidth/2
 let centreY = window.innerHeight/2
 
 // var a = window.innerWidth/10;
-var a = 1000;
 var seq = [1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10),1+Math.floor(Math.random() * 10)];
 var total = 0;
 for(var i = 0; i < seq.length; i++) {
     total += seq[i];
 }
 var avg = total / seq.length;
-var a = window.innerWidth/(10*avg);
+var a = window.innerWidth/(5*avg);
 
 var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
 
