@@ -23,13 +23,14 @@ for(var i = 0; i < seq.length; i++) {
 }
 var avg = total / seq.length;
 var a = window.innerWidth/(8*avg);
+console.log(a);
 
 var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
 
-var x1=centreX-4*a;
-var y1=centreY-5*a;
-var x2=centreX-4*a;
-var y2=centreY-5*a;
+var x1=centreX-a;
+var y1=centreY-2*a-74;
+var x2=centreX-a;
+var y2=centreY-2*a-74;
 
 var i=0;
 var j=0;
