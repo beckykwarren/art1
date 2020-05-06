@@ -22,7 +22,7 @@ for(var i = 0; i < seq.length; i++) {
     total += seq[i];
 }
 var avg = total / seq.length;
-var a = window.innerWidth/(5*avg);
+var a = window.innerWidth/(8*avg);
 
 var len = Math.floor(Math.random() *seq.length/2)+seq.length/2-1;
 
