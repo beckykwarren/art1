@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+/* .button {
+  margin: 10;
+  padding: 10;
+} */
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 10px;
+}
+.button:hover {background-color: #e7e7e7;}
